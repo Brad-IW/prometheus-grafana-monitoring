@@ -33,4 +33,14 @@
 12. Click upload JSON file, then select the `API Dashboard.json` provided within the repo.
 13. Finally press import.
 
-    The dashboard should now be showing information about requests and responses made by the API. 
+    The dashboard should now be showing information about requests and responses made by the API. Top left shows the number of responses for each status code, bottom left shows the total number of requests, and the right shows the time taken for each request.
+
+## Test Plan
+
+To test the dashboard we need to give prometheus some data. To accomplish this we will start up a new instance of the [DotNET Microservice Kong/PostgreSQL Version](https://github.com/Brad-IW/dotnet-microservice-alternate). 
+
+1. Ensure both the microservice and monitoring services are running.
+2. Make 5 requests to `http://localhost:80/api/users`, then check the Grafana dashboard.
+    The dashboard should show that 5 requests were made in total, 5 200 responses were made in the response code summary, and the sum of all request durations in seconds should equal 5.
+3. Make 4 requests to `http://localhost:80.api/users/1234`, then check the Grafana dashboard.
+    The dashboard should now show 9 total requests, 5 200 responses and 4 400 respones, and the sum of all request durations should total 9.
