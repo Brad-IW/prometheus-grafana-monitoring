@@ -9,7 +9,7 @@
 ## Installation Guide
 
 1. Clone this repo and extract the files.
-2. Open a terminal and navigate to the dotnet-microservice-alternate folder.
+2. Open a terminal and navigate to the prometheus-grafana-monitoring folder.
 3. Run `docker-compose up`
 
     Once the compose file has finished its start up procedure the Grafana will be available at `http://localhost:3000/`. If you are trying to access the API from another device replace `localhost` with the servers ip address or domain name. 
