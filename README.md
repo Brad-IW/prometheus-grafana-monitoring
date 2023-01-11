@@ -42,6 +42,6 @@ To test the dashboard we need to give prometheus some data. To accomplish this w
 
 1. Ensure both the microservice and monitoring services are running.
 2. Make 5 requests to `http://localhost:80/api/users`, then check the Grafana dashboard.
-    The dashboard should show that 5 requests were made in total, 5 200 responses were made in the response code summary, and the sum of all request durations in seconds should equal 5.
+    The dashboard should show that 5 requests were made in total, 5 200 responses were made in the response code summary.
 3. Make 4 requests to `http://localhost:80.api/users/1234`, then check the Grafana dashboard.
-    The dashboard should now show 9 total requests, 5 200 responses and 4 400 respones, and the sum of all request durations should total 9.
+    The dashboard should now show 9 total requests, and 5 200 responses and 4 400 respones.
