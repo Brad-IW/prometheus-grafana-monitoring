@@ -31,6 +31,7 @@
 10. Click Save & Test at the bottom of the page. This should show a popup saying "Data source is working."
 11. On the left navbar, click the Dashboard button (The 4 squares), then press Import
 12. Click upload JSON file, then select the `API Dashboard.json` provided within the repo.
+13. Under Prometheus, select the data source we created in the previous steps.
 13. Finally press import.
 
     The dashboard should now be showing information about requests and responses made by the API. Top left shows the number of responses for each status code, bottom left shows the total number of requests, and the right shows the time taken for each request.
