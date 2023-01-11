@@ -8,27 +8,29 @@
 
 ## Installation Guide
 
+1. Clone this repo and extract the files.
+2. Open a terminal and navigate to the dotnet-microservice-alternate folder.
+3. Run `docker-compose up`
 
+    Once the compose file has finished its start up procedure the Grafana will be available at `http://localhost:3000/`. If you are trying to access the API from another device replace `localhost` with the servers ip address or domain name. 
 
-open grafana page
-login with admin/admin
-set password
+4. Navigate to `http://localhost:3000/` in a web browser of your choice to reach the login page.
+5. Login using the default admin login 
 
-click add your first data source
-click prometheus
-set url to http://prometheus:9090/
-click save and test
-click grafana logo in top left
+    Username: admin
 
-click 4 squares button
-either: create new dashboard
-or:
-    import
-    copy json from API Dashboard.json
-    paste into import via panel json
-    click load
-    click import 
+    Password: admin
 
-    
+6. Enter a new, secure password into the new password fields and click submit.
+7. Click the Grafana icon on the top left of the left navbar.
+8. In the center of the page, click the "Add your first data source" button
+9. Click Prometheus
 
-add dashboard (pull from api dashboard.json)
+    In the URL field, add `http://prometheus:9090`
+
+10. Click Save & Test at the bottom of the page. This should show a popup saying "Data source is working."
+11. On the left navbar, click the Dashboard button (The 4 squares), then press Import
+12. Click upload JSON file, then select the `API Dashboard.json` provided within the repo.
+13. Finally press import.
+
+    The dashboard should now be showing information about requests and responses made by the API. 
